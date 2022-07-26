@@ -33,3 +33,51 @@ footer {
     justify-content: flex-end;
     background-color: var(--footer-background);
 }
+
+#hiding-places {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.cup-image {
+    height: 150px;
+    width: auto;
+}
+
+.cup-container {
+    height: 150px;
+
+}
+
+.cup-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.ball {
+    font-size: 4rem;
+    content: 🔵;
+    position: absolute;
+}
+
+.counter {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 0;
+}
+
+.hidden {
+    visibility: hidden;
+}
