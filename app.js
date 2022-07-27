@@ -21,9 +21,11 @@ const cupImgThree = document.getElementById('cup-img-3');
 const hidingPlaces = ['cupOne', 'cupTwo', 'cupThree'];
 // total wins and total guesses
 const winsEl = document.getElementById('wins');
+const lossesEl = document.getElementById('losses');
 const totalEl = document.getElementById('total');
 // starting values for wins and total guesses
 let correctGuesses = 0;
+let incorrectGuesses = 0;
 let totalGuesses = 0;
 // grabbing reset button DOM element
 const resetButton = document.getElementById('reset-button');
@@ -68,6 +70,8 @@ function handleGuess(correctSpot, userGuess) {
     winsEl.textContent = correctGuesses;
   } else {
     totalGuesses++;
+    incorrectGuesses++;
+    lossesEl.textContent = incorrectGuesses;
   }
 
   if (correctSpot === 'cupOne') {
@@ -84,7 +88,11 @@ function handleGuess(correctSpot, userGuess) {
 // event listener for reset button
 resetButton.addEventListener('click', () => {
   winsEl.textContent = 0;
+  lossesEl.textContent = 0;
   totalEl.textContent = 0;
+  correctGuesses = 0;
+  incorrectGuesses = 0;
+  totalGuesses = 0;
   clearScreen();
 });
 
