@@ -7,9 +7,7 @@
 body {
     height: 100vh;
     font-family: 'Rubik', san-serif;
-    background: var(--background);
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    background: linear-gradient(#00000085 10%, #44570F);
 }
 
 header {
@@ -17,11 +15,18 @@ header {
     top: 0;
     display: flex;
     align-items: center;
-    background-color: var(--header-background);
+    background-color: #00000045;
+    color: rgba(255, 255, 255, 0.527);
 }
 
-main {
-    padding: 20px;
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+    color: #d88d31;
+    /* color: #006C4B; */
+    letter-spacing: 1px;
 }
 
 footer {
@@ -31,25 +36,33 @@ footer {
     font-size: .8em;
     display: flex;
     justify-content: flex-end;
-    background-color: var(--footer-background);
+    background-color: #00000025;
+    color: rgba(255, 255, 255, 0.61);
 }
 
 #hiding-places {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-
-}
-
-.cup-image {
-    height: 150px;
-    width: auto;
+    margin-top: 30px;
 }
 
 .cup-container {
-    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+}
 
+.cup-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    width: auto;
 }
 
 .cup-button {
@@ -57,27 +70,82 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 30px;
+    width: auto;
+    background-color: #F89820;
+    color: #1DFECE;
+    font-size: 1.4rem;
 }
 
-.ball {
-    font-size: 4rem;
-    content: 🔵;
-    position: absolute;
+.cup-button:hover {
+    color: #1fcea8;
 }
 
-.counter {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: #333;
+.cup-button:active {
+    transform: translateY(3px);
+    font-size: 1.2rem;
+    background-color: #c07418;
+}
+
+#score-display {
+    font-size: 1.8rem;
+    color: #c07418;
     text-align: center;
-    margin-top: 15%;
-    margin-bottom: 0;
+    background-color: #00000010;
+    padding: 5px 0 5px 0;
+    margin-right: 30%;
+    margin-left: 30%;
 }
 
-.hidden {
-    visibility: hidden;
+.score-container {
+    display: grid;
+    grid-template-areas: "left middle right";
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1rem;
+    color: #d88d31;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: linear-gradient(to bottom, #00000010 10%, transparent);
+    padding-top: 10px;
+    font-size: 1.2rem;
+}
+
+#correct-score {
+    grid-area: "left";
+}
+
+#incorrect-score {
+    grid-area: "middle";
+}
+
+#total-score {
+    grid-area: "right";
+}
+
+#reset-container {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#reset-button {
+    padding: 2px;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: black;
+    background-color: #17ac8b;
+    border-radius: 10px;
+}
+
+#reset-button:hover {
+    background-color: #17ac8b;
+    color: white;
+}
+
+#reset-button:active {
+    transform: translateY(3px);
+    font-size: 1.1rem;
+    background-color: #0f9c6e;
 }
