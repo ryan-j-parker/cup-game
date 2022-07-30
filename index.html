@@ -16,14 +16,18 @@
 </head>
 
 <body>
+
     <header>
         <img src="/assets/html_css_js.png">
         <h1>Kitten in a Teacup</h1>
     </header>
 
     <main>
+
         <h2>Which teacup is the kitten hiding in?</h2>
+
         <div id="hiding-places">
+
             <div id="cup-1" class="cup-container">
                 <div id="cup-container-1">
                     <img src="/assets/fancy-teacup.png" id="cup-img-1" class="cup-image" />
@@ -42,21 +46,35 @@
                 </div>
                 <button id="cup-btn-3" class="cup-button">Cup #3</button>
             </div>
-        </div>
-        <div class="score-container">
-            <div class="score-text">You have guessed correctly</div><span id="wins">0</span>
-            <div class="score-text">times</div>
-            <div class="score-text">and incorrectly</div><span id="losses">0</span>
-            <div class="score-text">times</div>
-            <div class="score-text">out of a total of</div><span id="total">0</span>
-            <div class="score-text">games</div>
 
-            <button id="reset-button">Reset score</button>
         </div>
-        <!--
-        <img src="/assets/cup-with-ball.png" class="correctCup" id="cup-with-ball" alt="" />
-        <img src="/assets/red-cup.png" class="defaultCup" id="red-cup" alt="" />
-        <img src="/assets/red-cup.png" id="cup-img-3" class="cup-image" /> -->
+
+        <div id="score-display">Scoreboard</div>
+
+        <div class="score-container">
+
+            <div id="correct-score">
+                <div class="score-text">Correct guesses:</div><span id="wins">0</span>
+                <div class="score-text"></div>
+            </div>
+            
+            <div id="incorrect-score">
+                <div class="score-text">Incorrect guesses:</div><span id="losses">0</span>
+                <div class="score-text"></div>
+            </div>
+            
+            <div id="total-score">
+                <div class="score-text">Total games:</div><span id="total">0</span>
+                <div class="score-text"></div>
+            </div>
+        
+        </div>
+
+            <div id="reset-container">
+                <button id="reset-button">Reset scores</button>
+            </div>
+            
+        
 
     </main>
 
